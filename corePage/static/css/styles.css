@@ -1,0 +1,388 @@
+/*Fonts*/
+@font-face {
+  font-family: 'DroibBB';
+  src: url(../fonts/DisposableDroidBB.ttf);
+}
+/* General classes */
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'DroibBB';
+}
+a, h1, h2, h3, h4, h5, h6, p {
+  color: white;
+}
+body {
+  background-image: url('../images/ep_naturalblack.png');
+}
+ul {
+  list-style: none;
+}
+.clear {
+  clear: both;
+}
+.mainPage {
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/*Neon glow animation*/
+@-webkit-keyframes neon {
+  from { box-shadow: 0 0 15px #4666FF;}
+  25% { box-shadow: 0 0 20px #4666FF;}
+  50% { box-shadow: 0 0 30px #4666FF;}
+  75% { box-shadow: 0 0 20px #4666FF;}
+  to { box-shadow: 0 0 15px #4666FF;}
+}
+/*Header*/
+.mainHeader {
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  background-image: -webkit-repeating-radial-gradient(center center, transparent, transparent
+  1px, #4666FF 2px, #4666FF 100%);
+  background-image: -moz-repeating-radial-gradient(center center, transparent, transparent
+  1px, #4666FF 2px, #4666FF 100%);
+  background-image: -ms-repeating-radial-gradient(center center, transparent, transparent
+  1px, #4666FF 2px, #4666FF 100%);
+  background-image: repeating-radial-gradient(center center, transparent, transparent
+  1px, #4666FF 2px, #4666FF 100%);
+  -webkit-background-size: 3px 3px;
+  -moz-background-size: 3px 3px;
+  -ms-background-size: 3px 3px;
+  background-size: 3px 3px;
+  position: relative;
+  -webkit-animation-name: neon;
+  -webkit-animation-duration: 5s;
+  -webkit-animation-iteration-count: infinite;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+/*Player Info*/
+.playerInfo {
+  margin-top: 1em;
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+  background-image: -webkit-repeating-radial-gradient(center center, transparent, transparent
+  1px, #4666FF 2px, #4666FF 100%);
+  background-image: -moz-repeating-radial-gradient(center center, transparent, transparent
+  1px, #4666FF 2px, #4666FF 100%);
+  background-image: -ms-repeating-radial-gradient(center center, transparent, transparent
+  1px, #4666FF 2px, #4666FF 100%);
+  background-image: repeating-radial-gradient(center center, transparent, transparent
+  1px, #4666FF 2px, #4666FF 100%);
+  -webkit-background-size: 3px 3px;
+  -moz-background-size: 3px 3px;
+  -ms-background-size: 3px 3px;
+  background-size: 3px 3px;
+  height: 300px;
+}
+.playerHeader {
+  width: 100%;
+  padding: 5px 0;
+  text-align: center;
+  background: #001B96;
+}
+.playerInfo .playerInfoText {
+  float: left;
+  margin: 1em 1.5em;
+}
+.playerInfo .playerInfoImg {
+  float: right;
+  margin: 0.5em 1em;
+}
+.playerInfoText ul li {
+  margin: 1.5em 0;
+}
+.infoLabels {
+  float: left;
+}
+.infoDetails {
+  float: left;
+  margin-left: 1em;
+}
+.playerInfoImg img {
+  max-width: 180px;
+}
+/*Skills Box*/
+.skillsBox {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 1em;
+  height: 100px;
+  text-align: center;
+}
+.skillsIcon {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+}
+.skillsImg {
+  position: relative;
+  max-width: 100px;
+  top: 0;
+  left: 0;
+}
+.skillsIcon .overlay {
+  background: rgbs(0,0,0,0.5);
+  height: 100%;
+  left: 0;
+  width: 100%;
+  position: absolute;
+  -webkit-transition: all 0.1s;
+  -moz-transition: all 0.1s;
+  -o-transition: all 0.1s;
+  transition: all 0.1s;
+}
+.skillsIcon .imageText {
+  position: absolute;
+  bottom: -100%;
+  left: 50%;
+  -webkit-transition: all 0.1s;
+  -moz-transition: all 0.1s;
+  -o-transition: all 0.1s;
+  transition: all 0.1s;
+  -webkit-transform: translate(-50%, 50%);
+  -moz-transform: translate(-50%, 50%);
+  -ms-transform: translate(-50%, 50%);
+  -o-transform: translate(-50%, 50%);
+  transform: translate(-50%, 50%);
+}
+.skillsIcon .imageText h4 {
+  color: white;
+}
+.skillsIcon:hover .skillsImg {
+  filter: brightness(60%);
+  -webkit-filter: brightness(60%);
+  -moz-filter: brightness(60%);
+  -ms-filter: brightness(60%);
+  -o-filter: brightness(60%);
+}
+.skillsIcon:hover .imageText {
+  bottom: 50%;
+}
+.skillsIcon:hover .overlay {
+  top: 0;
+}
+/*Display text box*/
+.textDisplay {
+  margin-top: 1.5em;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+/*Text Display*/
+.boxWrapper {
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.mainTabs {
+  width: 100%;
+  display: inline-block;
+  text-align: center;
+}
+.mainTabs ul:after {
+  list-style: none;
+  display: block;
+  clear: both;
+  content: "";
+}
+.mainTabs ul li {
+  list-style: none;
+  display: inline-block;
+  width: 45%;
+  text-align: center;
+}
+.mainTabs ul li a {
+  display: block;
+  padding: 0.7em 0;
+  text-decoration: none;
+  transition: all linear 0.20s;
+}
+.mainTabs ul li a:hover {
+  background: #4666FF;
+}
+.mainTabs ul .activeTab a {
+  background: #001B96;
+}
+.tabsContent {
+  padding: 1em 0.6em;
+  border-radius: 3px;
+  text-align: left;
+  border: 1px solid #4666FF;
+  -webkit-animation-name: neon;
+  -webkit-animation-duration: 5s;
+  -webkit-animation-iteration-count: infinite;
+  background-image: -webkit-repeating-radial-gradient(center center, transparent, transparent
+  1px, #4666FF 2px, #4666FF 100%);
+  background-image: -moz-repeating-radial-gradient(center center, transparent, transparent
+  1px, #4666FF 2px, #4666FF 100%);
+  background-image: -ms-repeating-radial-gradient(center center, transparent, transparent
+  1px, #4666FF 2px, #4666FF 100%);
+  background-image: repeating-radial-gradient(center center, transparent, transparent
+  1px, #4666FF 2px, #4666FF 100%);
+  -webkit-background-size: 3px 3px;
+  -moz-background-size: 3px 3px;
+  -ms-background-size: 3px 3px;
+  background-size: 3px 3px;
+}
+.tabsContent ul li {
+  width: 100%;
+}
+.tab {
+  display: none;
+}
+.tab.active {
+  display: block;
+}
+hr {
+  margin: 1em;
+  border: 1px solid #4666FF;
+  -webkit-animation-name: neon;
+  -webkit-animation-duration: 5s;
+  -webkit-animation-iteration-count: infinite;
+}
+#lasthr {
+  display: none;
+}
+/*Professional.html formatting*/
+.professionalPage h2 {
+  text-align: center;
+}
+.professionalPage ul {
+  list-style: none;
+}
+.professionalPage ul li {
+  text-align: left;
+}
+.jobHeader {
+  width: 100%;
+  text-align: left;
+}
+.jobHeader div {
+  display: inline-block;
+  margin-left: 1em;
+}
+.jobDetails {
+  width: 95%;
+  margin-left: 1em;
+}
+/**My Skills**/
+.skillsWrapper {
+  width: 100%;
+  display: inline-block;
+}
+.skillsText {
+  width: 80%;
+  float: right;
+  text-align: left;
+}
+.skillsText h5 {
+  margin-top: 0.5em;
+}
+.icon {
+  background-image: url("../images/skills_icons_100x100.png");
+  vertical-align: middle;
+  background-repeat: no-repeat;
+  float: left;
+}
+.aws {
+  background-position: 0 0;
+  height: 100px;
+  width: 100px;
+}
+.cisco {
+  background-position: -115px 0;
+  height: 90px;
+  width: 90px;
+}
+.css {
+  background-position: -805px 0;
+  height: 90px;
+  width: 90px;
+}
+.googlebb {
+  background-position: -230px 0;
+  height: 100px;
+  width: 100px;
+}
+.html {
+  background-position: -345px 0;
+  height: 100px;
+  width: 100px;
+}
+.javascript {
+  background-position: -460px 0;
+  height: 100px;
+  width: 100px;
+}
+.jquery {
+  background-position: -575px 0;
+  height: 100px;
+  width: 100px;
+}
+.linux {
+  background-position: -690px 0;
+  height: 100px;
+  width: 100px;
+}
+.php {
+  background-position: -920px 0;
+  height: 100px;
+  width: 100px;
+}
+.python {
+  background-position: -1035px 0;
+  height: 100px;
+  width: 100px;
+}
+.windows {
+  background-position: -1150px 0;
+  height: 100px;
+  width: 100px;
+}
+.certPassed {
+  color: #66ff66;
+}
+.grayedOut {
+  opacity: 0.6; /* Real browsers */
+  filter: alpha(opacity = 60);
+}
+/* Hobbies */
+.hobbiesIcon {
+  background-image: url("../images/hobbies_icons_100x100.png");
+  vertical-align: middle;
+  background-repeat: no-repeat;
+  float: left;
+}
+.karate {
+  background-position: -460px 0;
+  height: 100px;
+  width: 100px;
+}
+.japan {
+  background-position: -345px 0;
+  height: 100px;
+  width: 100px;
+}
+.basketball {
+  background-position: 0 0;
+  height: 100px;
+  width: 100px;
+}
+.games {
+  background-position: -230px 0;
+  height: 100px;
+  width: 100px;
+}
+.music {
+  background-position: -575px 0;
+  height: 100px;
+  width: 100px;
+}

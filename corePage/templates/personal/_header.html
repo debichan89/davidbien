@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    {% load staticfiles %}
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'css/grid.css' %}" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Modak|Titillium+Web|Ubuntu" rel="stylesheet">
+    <script type="text/javascript" src="{% static 'javascript/jquery.js'%}" ></script>
+    <script type="text/javascript" src="{% static 'javascript/bootstrap.js'%}" ></script>
+  </head>
+  <body>
+      <div class="mainHeader">
+        <div class="headerText">
+          <h2>David Bien's</h2>
+          <h4>Challenge to the world</h4>
+          <h5>デイビッドの世界への挑戦</h5>
+        </div>
+      </div>
+    {% block content %}
+    {% endblock content %}
+</html>
