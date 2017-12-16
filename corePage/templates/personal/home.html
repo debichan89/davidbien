@@ -2,91 +2,85 @@
 {% block content %}
 {% load staticfiles %}
 <div class="mainPage">
-  <div class="playerInfo">
-      <div class="playerHeader">
-        <h3>Player Info</h3>
-        <h6><p>プレイヤー情報</p></h6>
-      </div>
-      <div class="playerInfoText">
-          <div class="infoLabels">
-            <ul>
-              <li>
-                <h3>Name:</h3>
-              </li>
-              <li>
-                <h3>Level(Age):</h3>
-              </li>
-              <li>
-                <h3>Origin:</h3>
-              </li>
-              <li>
-                <h3>Current Stage:</h3>
-              </li>
-            </ul>
+<div class="information container">
+  <div class="row">
+    <div class="col informationBox">
+      <div class="informationBorder">
+        <div class="absolute">
+          <div class="infoHeader">
+            <h4>Information</h4>
           </div>
-          <div class="infoDetails">
-            <ul>
-              <li><h3>David Bien</h3></li>
-              <li><h3>28</h3></li>
-              <li><h3>Opole, Poland</h3></li>
-              <li><h3>London, UK</h3></li>
-            </ul>
+          <div class="infoText">
+              <div class="infoLabels">
+                <ul>
+                  <li>
+                    <h5>Name:</h5>
+                  </li>
+                  <li>
+                    <h5>Age:</h5>
+                  </li>
+                  <li>
+                    <h5>Origin:</h5>
+                  </li>
+                  <li>
+                    <h5>Currently:</h5>
+                  </li>
+                </ul>
+              </div>
+              <div class="infoDetails">
+                <ul>
+                  <li><h5>David Bien</h5></li>
+                  <li><h5>28</h5></li>
+                  <li><h5>Opole, Poland</h5></li>
+                  <li><h5>London, UK</h5></li>
+                </ul>
+              </div>
+              <div class="clear">
+            </div>
           </div>
-          <div class="clear">
         </div>
       </div>
-        <div class="playerInfoImg">
-          <img src="{% static 'images/db.jpg' %}" alt="">
-        </div>
-        <div class="clear"></div>
     </div>
+    <div class="col personalPic">
+      <img src="{% static 'images/profilePic.png' %}" alt="">
+    </div>
+  </div>
+</div>
     <div class="skillsBox">
       <ul class="row">
         <li class="col">
-          <a href="{% url 'aboutme' %}">
+          <a class="activeSkill" href="{% url 'aboutme' %}">
             <div class="skillsIcon">
-              <img class="skillsImg" src="{% static "images/avatar_icon100.png" %}" alt="">
-              <div class="overlay"></div>
-              <div class="imageText">
-                <h4>About</h4>
-                <h5><p>本人について</p></h5>
+              <div class="ninja">
               </div>
+              <h4>About Me</h4>
             </div>
           </a>
         </li>
         <li class="col">
           <a href="{% url 'myskills' %}">
             <div class="skillsIcon">
-              <img class="skillsImg" src="{% static "images/skills_icon_new100.png" %}" alt="">
-              <div class="overlay"></div>
-              <div class="imageText">
-                <h4>Skills</h4>
-                <h5><p>技</p></h5>
+              <div class="skills">
               </div>
+              <h4>My Skills</h4>
             </div>
           </a>
         </li>
         <li class="col">
           <a href="{% url 'myhobbies' %}">
             <div class="skillsIcon">
-              <img class="skillsImg" src="{% static "images/hobby_icon_new100.png" %}" alt="">
-              <div class="overlay"></div>
-              <div class="imageText">
-                <h4>Hobbies</h4>
-                <h5><p>趣味</p></h5>
+              <div class="hobbies">
               </div>
+              <h4>My Hobbies</h4>
             </div>
           </a>
         </li>
         <li class="col">
           <a href="#">
             <div class="skillsIcon">
-              <img class="skillsImg" src="{% static "images/projects_icon100.png" %}" alt="">
-              <div class="overlay"></div>
-              <div class="imageText">
-                <h4>Projects</h4>
-                <h5><p>プロジェクト</p></h5>
+              <div class="projects">
               </div>
+              <h4>Projects</h4>
             </div>
           </a>
         </li>
@@ -94,15 +88,18 @@
     </div>
     <div class="textDisplay">
       <div class="textBox">
-        <h3>Placeholder</h3>
+        <h3></h3>
       </div>
     </div>
 </div>
+{% include "personal/_footer.html" %}
 <script type="text/javascript">
   $('.textBox h3').load("{% url 'aboutme' %}");
-  $('.row li a').on('click', function(e){
+  $('.row li').on('click', function(e){
     e.preventDefault();
-    $('.textBox h3').load($(this).attr('href'));
+    $('.activeSkill').removeClass('activeSkill');
+    $(this).find('a').addClass('activeSkill');
+    $('.textBox h3').load($(this).find('a').attr('href'));
   });
 </script>
 {% endblock %}

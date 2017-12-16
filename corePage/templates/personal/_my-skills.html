@@ -19,7 +19,7 @@
     $('.mainTabs ul li a').on('click', function(e){
       var currentAttrValue = $(this).attr('href');
       $(this).parent('li').addClass('activeTab').siblings().removeClass('activeTab');
-      $('.tabsContent ' + currentAttrValue).show(1000,"swing").siblings().hide();
+      $('.tabsContent ' + currentAttrValue).show().siblings().hide();
       e.preventDefault();
     });
 

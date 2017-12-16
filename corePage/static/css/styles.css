@@ -1,19 +1,34 @@
 /*Fonts*/
 @font-face {
-  font-family: 'DroibBB';
-  src: url(../fonts/DisposableDroidBB.ttf);
+  font-family: 'Itachi';
+  src: url(../fonts/Zenzai-Itachi.ttf);
+}
+@font-face {
+  font-family: 'Kanji';
+  src: url(../fonts/HanZi.ttf);
+}
+@font-face {
+  font-family: 'Roboto';
+  src: url(../fonts/Roboto-Regular.ttf);
 }
 /* General classes */
 * {
   margin: 0;
   padding: 0;
-  font-family: 'DroibBB';
+  font-family: 'Roboto';
 }
 a, h1, h2, h3, h4, h5, h6, p {
-  color: white;
+  color: black;
+  text-decoration: none;
+  display: block;
+}
+p {
+  margin: 1.5em 0;
+  line-height: 35px;
+  font-size: 15px;
 }
 body {
-  background-image: url('../images/ep_naturalblack.png');
+  background-image: url('../images/Background.png');
 }
 ul {
   list-style: none;
@@ -22,152 +37,184 @@ ul {
   clear: both;
 }
 .mainPage {
-  width: 50%;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-/*Neon glow animation*/
-@-webkit-keyframes neon {
-  from { box-shadow: 0 0 15px #4666FF;}
-  25% { box-shadow: 0 0 20px #4666FF;}
-  50% { box-shadow: 0 0 30px #4666FF;}
-  75% { box-shadow: 0 0 20px #4666FF;}
-  to { box-shadow: 0 0 15px #4666FF;}
-}
-/*Header*/
-.mainHeader {
-  width: 50%;
-  margin-left: auto;
-  margin-right: auto;
-  text-align: center;
-  background-image: -webkit-repeating-radial-gradient(center center, transparent, transparent
-  1px, #4666FF 2px, #4666FF 100%);
-  background-image: -moz-repeating-radial-gradient(center center, transparent, transparent
-  1px, #4666FF 2px, #4666FF 100%);
-  background-image: -ms-repeating-radial-gradient(center center, transparent, transparent
-  1px, #4666FF 2px, #4666FF 100%);
-  background-image: repeating-radial-gradient(center center, transparent, transparent
-  1px, #4666FF 2px, #4666FF 100%);
-  -webkit-background-size: 3px 3px;
-  -moz-background-size: 3px 3px;
-  -ms-background-size: 3px 3px;
-  background-size: 3px 3px;
-  position: relative;
-  -webkit-animation-name: neon;
-  -webkit-animation-duration: 5s;
-  -webkit-animation-iteration-count: infinite;
-  border-bottom-left-radius: 10px;
-  border-bottom-right-radius: 10px;
-}
-/*Player Info*/
-.playerInfo {
-  margin-top: 1em;
   width: 70%;
   margin-left: auto;
   margin-right: auto;
-  background-image: -webkit-repeating-radial-gradient(center center, transparent, transparent
-  1px, #4666FF 2px, #4666FF 100%);
-  background-image: -moz-repeating-radial-gradient(center center, transparent, transparent
-  1px, #4666FF 2px, #4666FF 100%);
-  background-image: -ms-repeating-radial-gradient(center center, transparent, transparent
-  1px, #4666FF 2px, #4666FF 100%);
-  background-image: repeating-radial-gradient(center center, transparent, transparent
-  1px, #4666FF 2px, #4666FF 100%);
-  -webkit-background-size: 3px 3px;
-  -moz-background-size: 3px 3px;
-  -ms-background-size: 3px 3px;
-  background-size: 3px 3px;
-  height: 300px;
 }
-.playerHeader {
-  width: 100%;
-  padding: 5px 0;
+.kanjiFont {
+  font-family: 'Kanji';
+}
+/*Header*/
+.mainHeader {
+  width: 70%;
+  margin-top: 2em;
+  margin-left: auto;
+  margin-right: auto;
   text-align: center;
-  background: #001B96;
 }
-.playerInfo .playerInfoText {
-  float: left;
-  margin: 1em 1.5em;
+.mainHeader h2 {
+  font-size: 60px;
+  font-family: 'Kanji';
+  color: red;
 }
-.playerInfo .playerInfoImg {
-  float: right;
-  margin: 0.5em 1em;
+/*DB Info*/
+.information {
+  width: 100%;
+  margin: 2em 0;
+  text-align: center;
 }
-.playerInfoText ul li {
-  margin: 1.5em 0;
+.informationBorder {
+  background: url('../images/Box.png');
+  background-repeat: no-repeat;
+  background-size: 80% auto;
+  background-position: center;
+  width: 100%;
+  height: 400px;
+  position: relative;
+  text-align: center;
+}
+.informationBorder .absolute {
+  padding: 3em;
+}
+.infoHeader {
+  width: 100%;
+  padding: 15px 0;
+}
+.infoHeader h4 {
+  font-family: 'Kanji';
+}
+.infoText {
+  width: 100%;
+  padding: 0 4.5em;
+}
+.infoText ul li {
+  margin: 1.9em 0;
 }
 .infoLabels {
   float: left;
+  text-align: left;
+  width: 48%;
+}
+.infoLabels h5 {
+  font-family: 'Kanji';
 }
 .infoDetails {
   float: left;
-  margin-left: 1em;
+  text-align: left;
+  width: 48%;
 }
-.playerInfoImg img {
-  max-width: 180px;
+.infoDetails h5 {
+  font-family: 'Roboto';
+}
+.personalPic img {
+  width: 65%;
+  height: 95%;
 }
 /*Skills Box*/
 .skillsBox {
   width: 100%;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 1em;
+  margin: 3em 0;
   height: 100px;
   text-align: center;
 }
+.skillsBox .row .col a:hover h4 {
+  color: red;
+}
+.skillsBox .row .col a:hover .ninja {
+  background: url('../images/red_ninja_circle.png');
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  width: 40%;
+  height: 110px;
+}
+.skillsBox .row .col a:hover .skills {
+  background: url('../images/red_skills_circle.png');
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  width: 40%;
+  height: 110px;
+}
+.skillsBox .row .col a:hover .hobbies {
+  background: url('../images/red_joypad_circle.png');
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  width: 40%;
+  height: 110px;
+}
+.skillsBox .row .col a:hover .projects {
+  background: url('../images/red_file_circle.png');
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  width: 40%;
+  height: 110px;
+}
+.activeSkill h4 {
+  color: red;
+}
+.activeSkill .ninja {
+  background: url('../images/red_ninja_circle.png');
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  width: 40%;
+  height: 110px;
+}
+.activeSkill .skills {
+  background: url('../images/red_skills_circle.png');
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  width: 40%;
+  height: 110px;
+}
+.activeSkill .hobbies {
+  background: url('../images/red_joypad_circle.png');
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  width: 40%;
+  height: 110px;
+}
+.activeSkill .projects {
+  background: url('../images/red_file_circle.png');
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  width: 40%;
+  height: 110px;
+}
 .skillsIcon {
-  width: 100%;
-  overflow: hidden;
-  position: relative;
-  text-align: center;
+    text-align: center;
 }
-.skillsImg {
-  position: relative;
-  max-width: 100px;
-  top: 0;
-  left: 0;
+.ninja {
+  margin: 0 auto;
+  background: url('../images/ninja_circle.png');
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  width: 40%;
+  height: 110px;
 }
-.skillsIcon .overlay {
-  background: rgbs(0,0,0,0.5);
-  height: 100%;
-  left: 0;
-  width: 100%;
-  position: absolute;
-  -webkit-transition: all 0.1s;
-  -moz-transition: all 0.1s;
-  -o-transition: all 0.1s;
-  transition: all 0.1s;
+.skills {
+  margin: 0 auto;
+  background: url('../images/skills_circle.png');
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  width: 40%;
+  height: 110px;
 }
-.skillsIcon .imageText {
-  position: absolute;
-  bottom: -100%;
-  left: 50%;
-  -webkit-transition: all 0.1s;
-  -moz-transition: all 0.1s;
-  -o-transition: all 0.1s;
-  transition: all 0.1s;
-  -webkit-transform: translate(-50%, 50%);
-  -moz-transform: translate(-50%, 50%);
-  -ms-transform: translate(-50%, 50%);
-  -o-transform: translate(-50%, 50%);
-  transform: translate(-50%, 50%);
+.hobbies {
+  margin: 0 auto;
+  background: url('../images/joypad_circle.png');
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  width: 40%;
+  height: 110px;
 }
-.skillsIcon .imageText h4 {
-  color: white;
-}
-.skillsIcon:hover .skillsImg {
-  filter: brightness(60%);
-  -webkit-filter: brightness(60%);
-  -moz-filter: brightness(60%);
-  -ms-filter: brightness(60%);
-  -o-filter: brightness(60%);
-}
-.skillsIcon:hover .imageText {
-  bottom: 50%;
-}
-.skillsIcon:hover .overlay {
-  top: 0;
+.projects {
+  margin: 0 auto;
+  background: url('../images/file_circle.png');
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  width: 40%;
+  height: 110px;
 }
 /*Display text box*/
 .textDisplay {
@@ -183,9 +230,10 @@ ul {
   margin-right: auto;
 }
 .mainTabs {
-  width: 100%;
   display: inline-block;
-  text-align: center;
+}
+.mainTabs ul {
+  margin: 1.5em 0;
 }
 .mainTabs ul:after {
   list-style: none;
@@ -196,41 +244,25 @@ ul {
 .mainTabs ul li {
   list-style: none;
   display: inline-block;
-  width: 45%;
-  text-align: center;
+  margin-left: 2em;
 }
 .mainTabs ul li a {
   display: block;
   padding: 0.7em 0;
   text-decoration: none;
-  transition: all linear 0.20s;
+  color: #666;
+  font-family: 'Kanji';
 }
 .mainTabs ul li a:hover {
-  background: #4666FF;
+  color: red;
 }
 .mainTabs ul .activeTab a {
-  background: #001B96;
+  color: red;
 }
 .tabsContent {
   padding: 1em 0.6em;
   border-radius: 3px;
   text-align: left;
-  border: 1px solid #4666FF;
-  -webkit-animation-name: neon;
-  -webkit-animation-duration: 5s;
-  -webkit-animation-iteration-count: infinite;
-  background-image: -webkit-repeating-radial-gradient(center center, transparent, transparent
-  1px, #4666FF 2px, #4666FF 100%);
-  background-image: -moz-repeating-radial-gradient(center center, transparent, transparent
-  1px, #4666FF 2px, #4666FF 100%);
-  background-image: -ms-repeating-radial-gradient(center center, transparent, transparent
-  1px, #4666FF 2px, #4666FF 100%);
-  background-image: repeating-radial-gradient(center center, transparent, transparent
-  1px, #4666FF 2px, #4666FF 100%);
-  -webkit-background-size: 3px 3px;
-  -moz-background-size: 3px 3px;
-  -ms-background-size: 3px 3px;
-  background-size: 3px 3px;
 }
 .tabsContent ul li {
   width: 100%;
@@ -242,18 +274,49 @@ ul {
   display: block;
 }
 hr {
-  margin: 1em;
-  border: 1px solid #4666FF;
-  -webkit-animation-name: neon;
-  -webkit-animation-duration: 5s;
-  -webkit-animation-iteration-count: infinite;
 }
 #lasthr {
   display: none;
 }
+/*Introduction*/
+.introduction {
+  width: 100%;
+  margin: 1em 0;
+}
+.introduction h1, h3 {
+  font-family: 'Kanji';
+}
+.upperLayer h1 {
+  font-size: 100px;
+}
+.upperLayer img {
+  width: 20%;
+  vertical-align: middle;
+}
+.red {
+  color: red;
+}
+.lowerLayer {
+  margin-top: 2em;
+}
+.lowerLayer .col {
+  display: inline-block;
+  vertical-align: middle;
+  height: 100%;
+}
+.lowerLayer img {
+  width: 20%;
+  vertical-align: middle;
+  float: left;
+}
+.lowerLayer .txt {
+  float: left;
+  margin-top: 1.4em;
+  margin-left: 0.5em;
+}
 /*Professional.html formatting*/
 .professionalPage h2 {
-  text-align: center;
+  text-align: left;
 }
 .professionalPage ul {
   list-style: none;
@@ -265,13 +328,23 @@ hr {
   width: 100%;
   text-align: left;
 }
+.professionalPage h4 {
+  font-family: 'Kanji';
+}
 .jobHeader div {
   display: inline-block;
   margin-left: 1em;
 }
 .jobDetails {
   width: 95%;
-  margin-left: 1em;
+}
+.separator {
+  margin: 3em 0;
+  background: url('../images/separator.png');
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  width: 100%;
+  height: 15px;
 }
 /**My Skills**/
 .skillsWrapper {
@@ -279,7 +352,7 @@ hr {
   display: inline-block;
 }
 .skillsText {
-  width: 80%;
+  width: 85%;
   float: right;
   text-align: left;
 }
@@ -287,65 +360,60 @@ hr {
   margin-top: 0.5em;
 }
 .icon {
-  background-image: url("../images/skills_icons_100x100.png");
-  vertical-align: middle;
+  background-image: url("../images/skills.png");
   background-repeat: no-repeat;
+  background-size: 85% auto;
   float: left;
 }
 .aws {
-  background-position: 0 0;
-  height: 100px;
-  width: 100px;
+  background-position: 0 20px;
+  height: 150px;
+  width: 150px;
 }
 .cisco {
-  background-position: -115px 0;
-  height: 90px;
-  width: 90px;
-}
-.css {
-  background-position: -805px 0;
-  height: 90px;
-  width: 90px;
+  background-position: 0 -405px;
+  height: 150px;
+  width: 150px;
 }
 .googlebb {
-  background-position: -230px 0;
-  height: 100px;
-  width: 100px;
+  background-position: 0 -530px;
+  height: 150px;
+  width: 150px;
 }
 .html {
-  background-position: -345px 0;
-  height: 100px;
-  width: 100px;
+  background-position: 0 -680px;
+  height: 150px;
+  width: 150px;
 }
 .javascript {
-  background-position: -460px 0;
-  height: 100px;
-  width: 100px;
+  background-position: 0 -125px;
+  height: 150px;
+  width: 150px;
 }
 .jquery {
-  background-position: -575px 0;
-  height: 100px;
-  width: 100px;
+  background-position: 0 -825px;
+  height: 150px;
+  width: 150px;
 }
 .linux {
-  background-position: -690px 0;
-  height: 100px;
-  width: 100px;
+  background-position: 0 -270px;
+  height: 150px;
+  width: 150px;
 }
 .php {
-  background-position: -920px 0;
-  height: 100px;
-  width: 100px;
+  background-position: 0 -960px;
+  height: 150px;
+  width: 150px;
 }
 .python {
-  background-position: -1035px 0;
-  height: 100px;
-  width: 100px;
+  background-position: 0 -1070px;
+  height: 150px;
+  width: 150px;
 }
 .windows {
-  background-position: -1150px 0;
-  height: 100px;
-  width: 100px;
+  background-position: 0 -1225px;
+  height: 150px;
+  width: 150px;
 }
 .certPassed {
   color: #66ff66;
@@ -356,33 +424,49 @@ hr {
 }
 /* Hobbies */
 .hobbiesIcon {
-  background-image: url("../images/hobbies_icons_100x100.png");
-  vertical-align: middle;
+  background-image: url("../images/hobbies.png");
   background-repeat: no-repeat;
+  background-size: 85% auto;
   float: left;
 }
 .karate {
-  background-position: -460px 0;
-  height: 100px;
-  width: 100px;
+  background-position: 0 -540px;
+  height: 150px;
+  width: 150px;
 }
 .japan {
-  background-position: -345px 0;
-  height: 100px;
-  width: 100px;
+  background-position: 0 20px;
+  height: 150px;
+  width: 150px;
+}
+.cloud {
+  background-position: 0 -280px;
+  height: 150px;
+  width: 150px;
 }
 .basketball {
-  background-position: 0 0;
-  height: 100px;
-  width: 100px;
+  background-position: 0 -120px;
+  height: 150px;
+  width: 150px;
 }
 .games {
-  background-position: -230px 0;
-  height: 100px;
-  width: 100px;
+  background-position: 0 -400px;
+  height: 150px;
+  width: 150px;
 }
 .music {
-  background-position: -575px 0;
-  height: 100px;
-  width: 100px;
+  background-position: 0 -680px;
+  height: 150px;
+  width: 150px;
+}
+/*Footer*/
+.footer {
+  width: 100%;
+  text-align: center;
+  background: black;
+  margin-top: 3em;
+}
+.byDavid h5 {
+  padding: 1em 0;
+  color: white;
 }

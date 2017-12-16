@@ -1,18 +1,62 @@
+{% load staticfiles %}
 <h4>
   <p>My name is David. I'm a Pole living in London, UK. I have been living here since summer 2013
     and absolutely love this city.
     I am a young(still!) and energetic bloke with many interests and a knack for languages and IT.
-    I am currently working as a systems/network engineer at IIJ Europe in London.
-    I am also strongly interested in programming and I am absolutely infatuated with Cloud technology(especially AWS).
-    That's what I have been doing/studying in my spare time lately and I hope I will be able to implement
-    those skills at work soon too!. At work I usually deal with various
-    systems(figures!) and networks(doh!). Please see my skills page for more details.</p>
+  </p>
+  <div class="introduction">
+    <div class="upperLayer">
+      <div class="container">
+        <div class="row">
+          <div class="col">
+            <h1>I AM</h1>
+          </div>
+          <div class="col red">
+            <h3>Strongly interested in:</h3>
+            <img src="{% static 'images/html.png' %}" alt="">Programming
+          </div>
+        </div>
+      </div>
+      <div class="clear"></div>
+    </div>
+    <div class="lowerLayer">
+      <div class="container">
+        <div class="row">
+          <div class="col">
+            <h3>Currently working as:</h3>
+              <img src="{% static 'images/network.png' %}" alt="">
+            <div class="txt">
+              <h5 class="red">Systems/Network Engineer</h5>
+              <h6>At Stellarise in London</h6>
+            </div>
+          </div>
+          <div class="clear"></div>
+          <div class="col">
+            <div class="img">
+              <h3>I am obsessed with: </h3>
+              <img src="{% static 'images/cloud.png' %}" alt="">
+              <div class="txt">
+                <h5 class="red">Cloud Technology</h5>
+                <h6>Especially AWS</h6>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <p>That's what I have been doing/studying in my spare time lately and I hope I will be able to implement
+    those skills at work soon too! At work I usually deal with various
+    systems(figures!) and networks(doh!). Please see my skills page for more details.
+  </p>
  <p>I am also fluent is 3 languages, including my mother tongue - Polish.
     I have been using English ever since I was about 5 years old and I self-taught
     myself Japanese to fluency in both speech and writing.
     I think that the best way to learn is to have fun and enjoy the actual
     learning process - that's why I am good at languages and IT. I enjoy doing
     both!
+  </p>
+  <p>
     I am also a sportsman and enjoy good exercise that leaves me huffing and puffing afterwards.
     Currently I am not doing much sports as I am extremely busy with work and study.
     I used to play basketball for around 8 years and I was a basketball team captain in high school.
