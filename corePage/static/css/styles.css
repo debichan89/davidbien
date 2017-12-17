@@ -351,6 +351,9 @@ hr {
   width: 100%;
   display: inline-block;
 }
+.skillsWrapper .skillTitle {
+  font-family: 'Kanji';
+}
 .skillsText {
   width: 85%;
   float: right;
@@ -429,6 +432,9 @@ hr {
   background-size: 85% auto;
   float: left;
 }
+.achText {
+  width: 100%;
+}
 .karate {
   background-position: 0 -540px;
   height: 150px;
@@ -470,3 +476,41 @@ hr {
   padding: 1em 0;
   color: white;
 }
+@media only screen and (min-device-width: 320px) and (max-device-width: 1024px) {
+    .mainPage {
+      width: 100%;
+    }
+    .infoText {
+      width: 90%;
+      padding: 0 3.5em;
+    }
+    .infoHeader {
+      width: 95%;
+      margin-top: 2.5em;
+      padding: 0;
+    }
+    .personalPic img {
+      width: 75%;
+      height: 100%;
+    }
+    p {
+      font-size: 13px;
+    }
+    .boxWrapper {
+      width: 100%;
+    }
+    .tabsContent {
+      padding: 1em 0;
+      margin: 0.5em 1em;
+    }
+    .skillsText {
+      width: 78%;
+      padding-right: 3em;
+    }
+    .separator {
+      margin: 2em 0;
+    }
+    .icon {
+      margin-top: 1em;
+    }
+  }
