@@ -17,15 +17,16 @@
   padding: 0;
   font-family: 'Roboto';
 }
-a, h1, h2, h3, h4, h5, h6, p {
+a, h3, h4, h5, h6, p {
   color: black;
   text-decoration: none;
   display: block;
+  font-size: 13px;
 }
 p {
   margin: 1.5em 0;
   line-height: 35px;
-  font-size: 15px;
+  font-size: 13px;
 }
 body {
   background-image: url('../images/Background.png');
@@ -60,13 +61,12 @@ ul {
 /*DB Info*/
 .information {
   width: 100%;
-  margin: 2em 0;
   text-align: center;
 }
 .informationBorder {
   background: url('../images/Box.png');
   background-repeat: no-repeat;
-  background-size: 80% auto;
+  background-size: 60% auto;
   background-position: center;
   width: 100%;
   height: 400px;
@@ -78,14 +78,15 @@ ul {
 }
 .infoHeader {
   width: 100%;
-  padding: 15px 0;
+  padding-top: 35px;
 }
 .infoHeader h4 {
+  font-size: 13px;
   font-family: 'Kanji';
 }
 .infoText {
-  width: 100%;
-  padding: 0 4.5em;
+  width: 75%;
+  padding-left: 8em;
 }
 .infoText ul li {
   margin: 1.9em 0;
@@ -106,16 +107,20 @@ ul {
 .infoDetails h5 {
   font-family: 'Roboto';
 }
+.personalPic {
+  text-align: left;
+  padding-top: 2em;
+}
 .personalPic img {
-  width: 65%;
-  height: 95%;
+  width: 52%;
+  height: 96%;
 }
 /*Skills Box*/
 .skillsBox {
   width: 100%;
   margin-left: auto;
   margin-right: auto;
-  margin: 3em 0;
+  margin: 1em 0;
   height: 100px;
   text-align: center;
 }
@@ -125,30 +130,34 @@ ul {
 .skillsBox .row .col a:hover .ninja {
   background: url('../images/red_ninja_circle.png');
   background-repeat: no-repeat;
-  background-size: 100% auto;
+  background-size: 70% auto;
+  background-position: center;
   width: 40%;
-  height: 110px;
+  height: 100px;
 }
 .skillsBox .row .col a:hover .skills {
   background: url('../images/red_skills_circle.png');
   background-repeat: no-repeat;
-  background-size: 100% auto;
+  background-size: 70% auto;
+  background-position: center;
   width: 40%;
-  height: 110px;
+  height: 100px;
 }
 .skillsBox .row .col a:hover .hobbies {
   background: url('../images/red_joypad_circle.png');
   background-repeat: no-repeat;
-  background-size: 100% auto;
+  background-size: 70% auto;
+  background-position: center;
   width: 40%;
-  height: 110px;
+  height: 100px;
 }
 .skillsBox .row .col a:hover .projects {
   background: url('../images/red_file_circle.png');
   background-repeat: no-repeat;
-  background-size: 100% auto;
+  background-size: 70% auto;
+  background-position: center;
   width: 40%;
-  height: 110px;
+  height: 100px;
 }
 .activeSkill h4 {
   color: red;
@@ -156,30 +165,34 @@ ul {
 .activeSkill .ninja {
   background: url('../images/red_ninja_circle.png');
   background-repeat: no-repeat;
-  background-size: 100% auto;
+  background-size: 70% auto;
+  background-position: center;
   width: 40%;
-  height: 110px;
+  height: 100px;
 }
 .activeSkill .skills {
   background: url('../images/red_skills_circle.png');
   background-repeat: no-repeat;
-  background-size: 100% auto;
+  background-size: 70% auto;
+  background-position: center;
   width: 40%;
-  height: 110px;
+  height: 100px;
 }
 .activeSkill .hobbies {
   background: url('../images/red_joypad_circle.png');
   background-repeat: no-repeat;
-  background-size: 100% auto;
+  background-size: 70% auto;
+  background-position: center;
   width: 40%;
-  height: 110px;
+  height: 100px;
 }
 .activeSkill .projects {
   background: url('../images/red_file_circle.png');
   background-repeat: no-repeat;
-  background-size: 100% auto;
+  background-size: 70% auto;
+  background-position: center;
   width: 40%;
-  height: 110px;
+  height: 100px;
 }
 .skillsIcon {
     text-align: center;
@@ -188,33 +201,37 @@ ul {
   margin: 0 auto;
   background: url('../images/ninja_circle.png');
   background-repeat: no-repeat;
-  background-size: 100% auto;
+  background-size: 70% auto;
+  background-position: center;
   width: 40%;
-  height: 110px;
+  height: 100px;
 }
 .skills {
   margin: 0 auto;
   background: url('../images/skills_circle.png');
   background-repeat: no-repeat;
-  background-size: 100% auto;
+  background-size: 70% auto;
+  background-position: center;
   width: 40%;
-  height: 110px;
+  height: 100px;
 }
 .hobbies {
   margin: 0 auto;
   background: url('../images/joypad_circle.png');
   background-repeat: no-repeat;
-  background-size: 100% auto;
+  background-size: 70% auto;
+  background-position: center;
   width: 40%;
-  height: 110px;
+  height: 100px;
 }
 .projects {
   margin: 0 auto;
   background: url('../images/file_circle.png');
   background-repeat: no-repeat;
-  background-size: 100% auto;
+  background-size: 70% auto;
+  background-position: center;
   width: 40%;
-  height: 110px;
+  height: 100px;
 }
 /*Display text box*/
 .textDisplay {
@@ -233,7 +250,7 @@ ul {
   display: inline-block;
 }
 .mainTabs ul {
-  margin: 1.5em 0;
+  margin-top: 1.5em;
 }
 .mainTabs ul:after {
   list-style: none;
@@ -244,6 +261,8 @@ ul {
 .mainTabs ul li {
   list-style: none;
   display: inline-block;
+}
+#secondTab {
   margin-left: 2em;
 }
 .mainTabs ul li a {
@@ -252,6 +271,7 @@ ul {
   text-decoration: none;
   color: #666;
   font-family: 'Kanji';
+  font-size: 20px;
 }
 .mainTabs ul li a:hover {
   color: red;
@@ -260,7 +280,7 @@ ul {
   color: red;
 }
 .tabsContent {
-  padding: 1em 0.6em;
+  padding: 0 0.6em;
   border-radius: 3px;
   text-align: left;
 }
@@ -312,11 +332,16 @@ hr {
 .lowerLayer .txt {
   float: left;
   margin-top: 1.4em;
+  font-size: 30px;
   margin-left: 0.5em;
 }
 /*Professional.html formatting*/
+.professionalPage {
+  margin-top: 3em;
+}
 .professionalPage h2 {
   text-align: left;
+  margin: 1.5em 0.5em;
 }
 .professionalPage ul {
   list-style: none;
@@ -355,7 +380,7 @@ hr {
   font-family: 'Kanji';
 }
 .skillsText {
-  width: 85%;
+  width: 88%;
   float: right;
   text-align: left;
 }
@@ -370,53 +395,53 @@ hr {
 }
 .aws {
   background-position: 0 20px;
-  height: 150px;
-  width: 150px;
+  height: 100px;
+  width: 100px;
 }
 .cisco {
-  background-position: 0 -405px;
-  height: 150px;
-  width: 150px;
+  background-position: 0 -270px;
+  height: 100px;
+  width: 100px;
 }
 .googlebb {
-  background-position: 0 -530px;
-  height: 150px;
-  width: 150px;
+  background-position: 0 -355px;
+  height: 100px;
+  width: 100px;
 }
 .html {
-  background-position: 0 -680px;
-  height: 150px;
-  width: 150px;
+  background-position: 0 -452px;
+  height: 100px;
+  width: 100px;
 }
 .javascript {
-  background-position: 0 -125px;
-  height: 150px;
-  width: 150px;
+  background-position: 0 -85px;
+  height: 100px;
+  width: 100px;
 }
 .jquery {
-  background-position: 0 -825px;
-  height: 150px;
-  width: 150px;
+  background-position: 0 -550px;
+  height: 100px;
+  width: 100px;
 }
 .linux {
-  background-position: 0 -270px;
-  height: 150px;
-  width: 150px;
+  background-position: 0 -180px;
+  height: 100px;
+  width: 100px;
 }
 .php {
-  background-position: 0 -960px;
-  height: 150px;
-  width: 150px;
+  background-position: 0 -640px;
+  height: 100px;
+  width: 100px;
 }
 .python {
-  background-position: 0 -1070px;
-  height: 150px;
-  width: 150px;
+  background-position: 0 -730px;
+  height: 100px;
+  width: 100px;
 }
 .windows {
-  background-position: 0 -1225px;
-  height: 150px;
-  width: 150px;
+  background-position: 0 -820px;
+  height: 100px;
+  width: 100px;
 }
 .certPassed {
   color: #66ff66;
@@ -436,34 +461,34 @@ hr {
   width: 100%;
 }
 .karate {
-  background-position: 0 -540px;
-  height: 150px;
-  width: 150px;
+  background-position: 0 -360px;
+  height: 100px;
+  width: 100px;
 }
 .japan {
   background-position: 0 20px;
-  height: 150px;
-  width: 150px;
+  height: 100px;
+  width: 100px;
 }
 .cloud {
-  background-position: 0 -280px;
-  height: 150px;
-  width: 150px;
+  background-position: 0 -180px;
+  height: 100px;
+  width: 100px;
 }
 .basketball {
-  background-position: 0 -120px;
-  height: 150px;
-  width: 150px;
+  background-position: 0 -85px;
+  height: 100px;
+  width: 100px;
 }
 .games {
-  background-position: 0 -400px;
-  height: 150px;
-  width: 150px;
+  background-position: 0 -265px;
+  height: 100px;
+  width: 100px;
 }
 .music {
-  background-position: 0 -680px;
-  height: 150px;
-  width: 150px;
+  background-position: 0 -455px;
+  height: 100px;
+  width: 100px;
 }
 /*Footer*/
 .footer {
@@ -480,9 +505,15 @@ hr {
     .mainPage {
       width: 100%;
     }
+    .informationBorder {
+      background-size: 85% auto;
+    }
     .infoText {
       width: 90%;
       padding: 0 3.5em;
+    }
+    .mainTabs ul {
+      margin-left: 1em;
     }
     .infoHeader {
       width: 95%;
@@ -512,5 +543,20 @@ hr {
     }
     .icon {
       margin-top: 1em;
+    }
+  }
+  @media only screen and (min-device-width: 1050px) and (max-device-width: 1750px) {
+    .mainPage {
+      width: 80%;
+    }
+    .informationBorder {
+      background-size: 75% auto;
+    }
+    .infoText {
+      padding-left: 6em;
+    }
+    .personalPic img {
+      width: 55%;
+      height: 90%;
     }
   }
