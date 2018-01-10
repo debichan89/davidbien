@@ -6,7 +6,7 @@
       <li id="secondTab"><a href="#certificates">Certificates</a></li>
     </ul>
     <div class="tabsContent">
-      <div id="skills" class="tab active">
+      <div id="skills" class="tab active" style="display: block;">
         {% include "./_skills.html" %}
       </div>
       <div class="tab" id="certificates">
@@ -22,5 +22,4 @@
       $('.tabsContent ' + currentAttrValue).show().siblings().hide();
       e.preventDefault();
     });
-
 </script>

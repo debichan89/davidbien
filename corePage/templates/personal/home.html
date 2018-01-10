@@ -49,7 +49,7 @@
     <div class="skillsBox">
       <ul class="row">
         <li class="col">
-          <a class="activeSkill" href="{% url 'aboutme' %}">
+          <a class="activeSkill" href="#aboutme">
             <div class="skillsIcon">
               <div class="ninja">
               </div>
@@ -58,7 +58,7 @@
           </a>
         </li>
         <li class="col">
-          <a href="{% url 'myskills' %}">
+          <a href="#myskills">
             <div class="skillsIcon">
               <div class="skills">
               </div>
@@ -67,7 +67,7 @@
           </a>
         </li>
         <li class="col">
-          <a href="{% url 'myhobbies' %}">
+          <a href="#myhobbies">
             <div class="skillsIcon">
               <div class="hobbies">
               </div>
@@ -88,18 +88,27 @@
     </div>
     <div class="textDisplay">
       <div class="textBox">
-        <h3></h3>
+          <div class="textTab active" id='aboutme'>
+            {% include "personal/_about-me.html" %}
+          </div>
+          <div class="textTab" id='myskills'>
+            {% include "personal/_my-skills.html" %}
+          </div>
+          <div class="textTab" id='myhobbies'>
+            {% include "personal/_my-hobbies.html" %}
+          </div>
       </div>
     </div>
 </div>
 {% include "personal/_footer.html" %}
 <script type="text/javascript">
-  $('.textBox h3').load("{% url 'aboutme' %}");
   $('.row li').on('click', function(e){
     e.preventDefault();
     $('.activeSkill').removeClass('activeSkill');
     $(this).find('a').addClass('activeSkill');
-    $('.textBox h3').load($(this).find('a').attr('href'));
+    $('.textBox .active').removeClass('active');
+    var currentTab = $(this).find('a').attr('href');
+    $(currentTab).addClass('active');
   });
 </script>
 {% endblock %}
